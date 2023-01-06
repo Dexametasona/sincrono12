@@ -1,22 +1,22 @@
 <form [formGroup]="form" class="w-1/2 mx-auto flex flex-col">
   <h1 class="my-3 text-4xl font-bold text-center">Formulario de contacto</h1>
-  <div class="flex my-3">
-    <label validaEstilo for="name">Nombre: </label>
-    <input formControlName="name" type="text" id="name" class="p-1">
+  <div class="flex my-3 caja" validaEstilo [estado]="form.get('name')?.valid ? true:false">
+    <label for="name">Nombre: </label>
+    <input  formControlName="name" pattern="[a-zA-Z][a-zA-Z ]+" type="text" id="name" class="p-1">
   </div>
-  <div class="flex mb-3">
+  <div class="flex mb-3 caja" validaEstilo [estado]="form.get('age')?.valid ? true:false">
     <label for="age">Edad: </label>
     <input formControlName="age" type="number" id="age" class="p-1">
   </div>
-  <div class="flex mb-3">
+  <div class="flex mb-3 caja" validaEstilo [estado]="form.get('phone')?.valid ? true:false">
     <label for="phone">Teléfono: </label>
     <input formControlName="phone" type="number" id="phone" class="p-1">
   </div>
-  <div class="flex mb-3">
+  <div class="flex mb-3 caja" validaEstilo [estado]="form.get('asunto')?.valid ? true:false">
     <label for="asunto">Asunto: </label>
     <input formControlName="asunto" type="text" id="asunto" class="p-1">
   </div>
-  <div class="flex mb-3">
+  <div class="flex mb-3 caja" validaEstilo [estado]="form.get('mensaje')?.valid ? true:false">
     <label for="mensaje">Mensaje: </label>
     <input formControlName="mensaje" type="text" id="mensaje" class="p-1">
   </div>

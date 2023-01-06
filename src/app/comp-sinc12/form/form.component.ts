@@ -10,17 +10,19 @@ export class FormComponent implements OnInit {
   public form!:FormGroup;
 
   constructor(private fb:FormBuilder) { }
-
+    
   ngOnInit(): void {
     this.form=this.fb.group({
-      name:['',
+      name:[' ',
         [
-          Validators.required
+          Validators.required,
+          Validators.minLength(2)
         ]
       ],
       age:['',
         [
-          Validators.required
+          Validators.required,
+          Validators.min(1)
         ]
       ],
       phone:['',

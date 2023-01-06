@@ -8,7 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    FormComponent
+    FormComponent,
+    ValidaEstiloDirective
   ],
   imports: [
     CommonModule,

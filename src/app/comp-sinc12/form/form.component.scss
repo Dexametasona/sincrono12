@@ -2,10 +2,10 @@
     width: 100%;
 }
 form{
-    div{
+    .caja{
         width: 100%;
+        border-bottom: 2px solid gray;
         input{
-            border-bottom: 2px solid gray;
             width: 100%;
         }
     }

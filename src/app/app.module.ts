@@ -8,8 +8,7 @@ import { ValidaEstiloDirective } from './directive/valida-estilo.directive';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ValidaEstiloDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
