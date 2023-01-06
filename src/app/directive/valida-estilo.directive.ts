@@ -1,10 +1,14 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appValidaEstilo]'
+  selector: '[validaEstilo]'
 })
 export class ValidaEstiloDirective {
 
-  constructor() { }
+  constructor(private yo:ElementRef) { }
+  
+  @HostListener('valida') validar(){
+    this.yo.nativeElement.style.backgroundColor='blue'
+  }
 
 }
